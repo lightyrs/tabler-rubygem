@@ -47,7 +47,7 @@ task :debug do
   require './lib/bootstrap'
   require 'term/ansicolor'
   require 'autoprefixer-rails'
-  path = Bootstrap.stylesheets_path
+  path = Tabler.stylesheets_path
   %w(_bootstrap _bootstrap-reboot _bootstrap-grid).each do |file|
     engine = Sass::Engine.for_file("#{path}/#{file}.scss", syntax: :scss, load_paths: [path])
     out = File.join('tmp', "#{file[1..-1]}.css")
