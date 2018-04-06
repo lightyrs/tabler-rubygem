@@ -30,7 +30,7 @@ class Updater
     @cache_path = cache_path
     @repo_url   = "https://github.com/#@repo"
     @save_to    = {
-        js:     'assets/javascripts',
+        js:     'assets/javascripts/tabler',
         scss:   'assets/stylesheets',
         fonts:  'assets/fonts',
         images: 'assets/images'}.merge(save_to)
@@ -52,7 +52,7 @@ class Updater
     update_scss_assets
     update_font_assets
     update_image_assets
-    # update_javascript_assets
+    update_javascript_assets
     store_version
   end
 
