@@ -18,7 +18,7 @@ class Updater
   include Js
   include Scss
 
-  def initialize(repo: 'twbs/bootstrap', branch: 'master', save_to: {}, cache_path: 'tmp/bootstrap-cache')
+  def initialize(repo: 'tabler/tabler', branch: 'master', save_to: {}, cache_path: 'tmp/tabler-cache')
     @logger     = Logger.new
     @repo       = repo
     @branch     = branch || 'master'
@@ -26,14 +26,14 @@ class Updater
     @cache_path = cache_path
     @repo_url   = "https://github.com/#@repo"
     @save_to    = {
-        js:    'assets/javascripts/bootstrap',
-        scss:  'assets/stylesheets/bootstrap'}.merge(save_to)
+        js:    'assets/javascripts/test',
+        scss:  'assets/stylesheets/test'}.merge(save_to)
   end
 
   def_delegators :@logger, :log, :log_status, :log_processing, :log_transform, :log_file_info, :log_processed, :log_http_get_file, :log_http_get_files, :silence_log
 
   def update_bootstrap
-    log_status 'Updating Bootstrap'
+    log_status 'Updating Tabler'
     puts " repo   : #@repo_url"
     puts " branch : #@branch_sha #@repo_url/tree/#@branch"
     puts " save to: #{@save_to.to_json}"
@@ -44,7 +44,7 @@ class Updater
     @save_to.each { |_, v| FileUtils.mkdir_p(v) }
 
     update_scss_assets
-    update_javascript_assets
+    # update_javascript_assets
     store_version
   end
 
@@ -61,7 +61,7 @@ class Updater
   # Update version.rb file with BOOTSTRAP_SHA
   def store_version
     path    = 'lib/tabler/version.rb'
-    content = File.read(path).sub(/BOOTSTRAP_SHA\s*=\s*['"][^'"]*['"]/, "BOOTSTRAP_SHA = '#@branch_sha'")
+    content = File.read(path).sub(/TABLER_SHA\s*=\s*['"][^'"]*['"]/, "TABLER_SHA = '#@branch_sha'")
     File.open(path, 'w') { |f| f.write(content) }
   end
 end
