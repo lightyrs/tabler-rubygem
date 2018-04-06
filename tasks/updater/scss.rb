@@ -55,7 +55,7 @@ class Updater
     end
 
     def adjust_manifest(file)
-      content = ["@import 'tabler/variables'", "@import 'bootstrap'"]
+      content = ['@import "tabler/variables";', '@import "bootstrap";']
       content.push File.readlines(file).reject { |line|
         line =~ /^\/\/.*$/
       }.map { |line|
