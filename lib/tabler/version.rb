@@ -1,4 +1,4 @@
 module Tabler
   VERSION       = '4.0.0'
-  TABLER_SHA = '8a628b943cf31ca0a002c08af661a95772480225'
+  TABLER_SHA = '00f78ad823311bc3ad974ac3e5b0126198f0a813'
 end

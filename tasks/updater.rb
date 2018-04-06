@@ -9,6 +9,8 @@ require 'fileutils'
 
 require_relative 'updater/scss'
 require_relative 'updater/js'
+require_relative 'updater/fonts'
+require_relative 'updater/images'
 require_relative 'updater/logger'
 require_relative 'updater/network'
 
@@ -17,6 +19,8 @@ class Updater
   include Network
   include Js
   include Scss
+  include Fonts
+  include Images
 
   def initialize(repo: 'tabler/tabler', branch: 'master', save_to: {}, cache_path: 'tmp/tabler-cache')
     @logger     = Logger.new
@@ -26,8 +30,10 @@ class Updater
     @cache_path = cache_path
     @repo_url   = "https://github.com/#@repo"
     @save_to    = {
-        js:    'assets/javascripts/test',
-        scss:  'assets/stylesheets/test'}.merge(save_to)
+        js:     'assets/javascripts',
+        scss:   'assets/stylesheets',
+        fonts:  'assets/fonts',
+        images: 'assets/images'}.merge(save_to)
   end
 
   def_delegators :@logger, :log, :log_status, :log_processing, :log_transform, :log_file_info, :log_processed, :log_http_get_file, :log_http_get_files, :silence_log
@@ -44,6 +50,8 @@ class Updater
     @save_to.each { |_, v| FileUtils.mkdir_p(v) }
 
     update_scss_assets
+    update_font_assets
+    update_image_assets
     # update_javascript_assets
     store_version
   end
