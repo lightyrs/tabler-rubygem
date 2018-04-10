@@ -54,6 +54,11 @@ class Updater
       font_file = "#{save_to}/tabler/fonts/_feather.scss"
       File.write font_file, File.read(font_file).gsub("url('../fonts/", "font-url('")
 
+      %w(_browser _flag _payments).each do |name|
+        file = "#{save_to}/tabler/#{name}.scss"
+        File.write file, File.read(file).gsub("url('../images/", "image-url('")
+      end
+
       adjust_manifest "#{save_to}/_tabler.scss"
     end
 

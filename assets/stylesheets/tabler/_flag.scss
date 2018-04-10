@@ -12,6 +12,6 @@
 
 @each $flag in $flag-icons {
 	.flag-#{$flag} {
-		background-image: url('../images/flags/' + $flag + '.svg');
+		background-image: image-url('flags/' + $flag + '.svg');
 	}
 }
