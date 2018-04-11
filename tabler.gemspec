@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'tabler/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'tabler'
+  s.name     = 'tabler-rubygem'
   s.version  = Tabler::VERSION
   s.authors  = ['lightyrs']
   s.email    = 'harris@lightyrs.com'
