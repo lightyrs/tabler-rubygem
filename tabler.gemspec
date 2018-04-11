@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version  = Tabler::VERSION
   s.authors  = ['lightyrs']
   s.email    = 'harris@lightyrs.com'
-  s.summary  = 'Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap 4'
-  s.homepage = 'https://tabler.github.io/'
+  s.summary  = 'Integrates Tabler Dashboard UI Kit (built on Bootstrap 4) into Rails Asset Pipeline'
+  s.homepage = 'https://github.com/lightyrs/tabler-rubygem'
   s.license  = 'MIT'
 
   s.add_runtime_dependency 'popper_js', '>= 1.12.9', '< 2'
