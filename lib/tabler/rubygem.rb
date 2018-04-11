@@ -71,4 +71,4 @@ module Tabler
   end
 end
 
-Tabler.load!
+Tabler::Rubygem.load!
