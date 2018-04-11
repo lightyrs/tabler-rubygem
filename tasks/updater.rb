@@ -68,7 +68,7 @@ class Updater
 
   # Update version.rb file with BOOTSTRAP_SHA
   def store_version
-    path    = 'lib/tabler/version.rb'
+    path    = 'lib/tabler/rubygem/version.rb'
     content = File.read(path).sub(/TABLER_SHA\s*=\s*['"][^'"]*['"]/, "TABLER_SHA = '#@branch_sha'")
     File.open(path, 'w') { |f| f.write(content) }
   end

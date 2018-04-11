@@ -4,7 +4,7 @@ require 'tabler/version'
 
 Gem::Specification.new do |s|
   s.name     = 'tabler-rubygem'
-  s.version  = Tabler::VERSION
+  s.version  = Tabler::Rubygem::VERSION
   s.authors  = ['lightyrs']
   s.email    = 'harris@lightyrs.com'
   s.summary  = 'Integrates Tabler Dashboard UI Kit (built on Bootstrap 4) into Rails Asset Pipeline'
