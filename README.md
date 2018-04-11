@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/tabler-rubygem.svg)](https://badge.fury.io/rb/tabler-rubygem)
+
 # Tabler Ruby Gem
 
 [Tabler][tabler-home] ruby gem for Ruby on Rails.
