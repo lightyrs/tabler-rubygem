@@ -11,10 +11,10 @@ Please see the appropriate guide for your environment of choice:
 
 ### a. Ruby on Rails
 
-Add `tabler` to your Gemfile:
+Add `tabler-rubygem` to your Gemfile:
 
 ```ruby
-gem 'tabler', github: 'lightyrs/tabler-rubygem'
+gem 'tabler-rubygem'
 ```
 
 Ensure that `sprockets-rails` is at least v2.3.2.
