@@ -14,7 +14,7 @@ Please see the appropriate guide for your environment of choice:
 Add `tabler-rubygem` to your Gemfile:
 
 ```ruby
-gem 'tabler-rubygem'
+gem 'tabler-rubygem', require: 'tabler'
 ```
 
 Ensure that `sprockets-rails` is at least v2.3.2.
