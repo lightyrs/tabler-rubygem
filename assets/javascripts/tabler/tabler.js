@@ -1,26 +1,3 @@
-require.config({
-shim: {
-'bootstrap': ['jquery'],
-'sparkline': ['jquery'],
-'tablesorter': ['jquery'],
-'vector-map': ['jquery'],
-'vector-map-de': ['vector-map', 'jquery'],
-'vector-map-world': ['vector-map', 'jquery'],
-'core': ['bootstrap', 'jquery'],
-},
-paths: {
-'core': 'core',
-'jquery': 'vendors/jquery-3.2.1.min',
-'bootstrap': 'vendors/bootstrap.bundle.min',
-'sparkline': 'vendors/jquery.sparkline.min',
-'selectize': 'vendors/selectize.min',
-'tablesorter': 'vendors/jquery.tablesorter.min',
-'vector-map': 'vendors/jquery-jvectormap-2.0.3.min',
-'vector-map-de': 'vendors/jquery-jvectormap-de-merc',
-'vector-map-world': 'vendors/jquery-jvectormap-world-mill',
-'circle-progress': 'vendors/circle-progress.min',
-}
-});
 window.tabler = {
 colors: {
 'blue': '#467fcf',
@@ -123,4 +100,3 @@ colors: {
 'gray-dark-lightest': '#ebebec'
 }
 };
-require(['core']);

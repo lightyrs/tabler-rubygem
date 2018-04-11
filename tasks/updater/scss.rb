@@ -11,6 +11,12 @@ class Updater
       end
       log_processed "#{tabler_scss_files * ' '}"
 
+      tabler_plugin_files = get_paths_by_type('dist/assets/plugins', /\.css$/)
+      read_files('dist/assets/plugins', tabler_plugin_files).each do |name, content|
+        save_file("#{save_to}/dashboard/plugins/#{name}", remove_source_mapping_url(content))
+      end
+      log_processed "#{tabler_plugin_files * ' '}"
+
       log_status 'Updating scss main files'
       FileUtils.rm "#{save_to}/bundle.scss"
       FileUtils.mv "#{save_to}/dashboard", "#{save_to}/tabler"
@@ -60,6 +66,9 @@ class Updater
       end
 
       adjust_manifest "#{save_to}/_tabler.scss"
+
+      plugins_file = File.new("#{save_to}/_tabler.plugins.scss", "w")
+      write_plugins_file(plugins_file, tabler_plugin_files)
     end
 
     def adjust_manifest(file)
@@ -70,6 +79,12 @@ class Updater
         line.gsub(/ '/, " 'tabler/").gsub("'", '"')
       }
       File.open(file, "w") { |f| content.flatten.each { |line| f.puts line } }
+    end
+
+    def write_plugins_file(plugins_file, tabler_plugin_files)
+      tabler_plugin_files.each do |line|
+        plugins_file.puts "@import \"tabler/plugins/#{line}\";"
+      end
     end
   end
 end

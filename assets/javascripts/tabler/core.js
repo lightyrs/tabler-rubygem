@@ -1,3 +1,4 @@
+let require = function(modules, fn) { fn(); };
 /**
  *
  */
