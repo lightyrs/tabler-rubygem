@@ -11,9 +11,6 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/lightyrs/tabler-rubygem'
   s.license  = 'MIT'
 
-  s.add_runtime_dependency 'popper_js', '>= 1.12.9', '< 2'
-
-  s.add_runtime_dependency 'sass', '>= 3.5.2'
   s.add_runtime_dependency 'autoprefixer-rails', '>= 6.0.3'
 
   # Testing dependencies

@@ -36,7 +36,7 @@ class Updater
         // = require tabler/plugins/input-mask/js/jquery.mask.min
       eos
 
-      File.write "#{save_to}/tabler.js", File.read("#{save_to}/dashboard.js").gsub("dashboard", "tabler").gsub(/require(?:(?!window).)*(?:}|])\);/m, "").gsub(/^\n/, "")
+      File.write "#{save_to}/tabler.js", File.read("#{save_to}/dashboard.js").gsub("dashboard", "tabler").gsub(/require(?:(?!window).)*(?:}|\])\);/m, "").gsub(/^\n/, "")
       FileUtils.rm "#{save_to}/dashboard.js"
       FileUtils.rm "#{save_to}/require.min.js"
     end

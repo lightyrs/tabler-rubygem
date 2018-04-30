@@ -13,9 +13,10 @@ Please see the appropriate guide for your environment of choice:
 
 ### a. Ruby on Rails
 
-Add `tabler-rubygem` to your Gemfile:
+Add `bootstrap` and `tabler-rubygem` to your Gemfile:
 
 ```ruby
+gem 'bootstrap', '~> 4.1.1'
 gem 'tabler-rubygem'
 ```
 
@@ -26,7 +27,9 @@ Ensure that `sprockets-rails` is at least v2.3.2.
 Import Tabler styles and optionally Tabler Plugin styles in `app/assets/stylesheets/application.scss`:
 
 ```scss
-// Custom tabler variables must be set or imported *before* tabler.
+// Custom tabler variables must be set or imported *before* bootstrap and tabler.
+@import "tabler/variables";
+@import "bootstrap";
 @import "tabler";
 @import "tabler.plugins"
 ```
@@ -38,6 +41,8 @@ You can also choose to include plugin css on a per-plugin basis, for example:
 
 ```scss
 // Custom tabler variables must be set or imported *before* tabler.
+@import "tabler/variables";
+@import "bootstrap";
 @import "tabler";
 @import "tabler/plugins/charts-c3/plugin.css";
 ```

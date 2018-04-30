@@ -199,6 +199,7 @@
 .card-aside-column {
 	min-width: 5rem;
 	width: 30%;
+	flex: 0 0 30%;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 	background: no-repeat center/cover;
@@ -236,7 +237,7 @@
 	color: $text-muted;
 	align-self: center;
 
-	a {
+	a:not(.btn) {
 		margin-left: .5rem;
 		color: $text-muted;
 		display: inline-block;
