@@ -31,7 +31,7 @@ Import Tabler styles and optionally Tabler Plugin styles in `app/assets/styleshe
 @import "tabler/variables";
 @import "bootstrap";
 @import "tabler";
-@import "tabler.plugins"
+@import "tabler.plugins";
 ```
 
 The available variables can be found [here][tabler-variables.scss].  
