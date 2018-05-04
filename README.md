@@ -68,7 +68,7 @@ Add Tabler and optionally Tabler Plugins to your `application.js`:
 Tabler already includes jQuery and Bootstrap javascript.  
 Tabler plugins includes the javascripts found [here][tabler-plugins].
 
-You can choose to include tabler's component when you already includes jQuery in application.js:
+If you already include jQuery in your project, you can include tabler's js on a per-file basis to avoid conflicts:
 
 ```js
 // = require tabler/tabler
