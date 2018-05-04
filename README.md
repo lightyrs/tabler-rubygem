@@ -68,6 +68,16 @@ Add Tabler and optionally Tabler Plugins to your `application.js`:
 Tabler already includes jQuery and Bootstrap javascript.  
 Tabler plugins includes the javascripts found [here][tabler-plugins].
 
+If you already include jQuery in your project, you can include tabler's js on a per-file basis to avoid conflicts:
+
+```js
+// = require tabler/tabler
+// = require tabler/vendors/bootstrap.bundle.min
+// = require tabler/vendors/circle-progress.min
+// = require tabler/vendors/jquery.sparkline.min
+// = require tabler/core
+```
+
 You can also choose to include plugin js on a per-plugin basis, for example:
 
 ```js
