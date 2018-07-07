@@ -13,7 +13,7 @@ class Updater
 
       tabler_plugin_files = get_paths_by_type('dist/assets/plugins', /\.css$/)
       read_files('dist/assets/plugins', tabler_plugin_files).each do |name, content|
-        save_file("#{save_to}/dashboard/plugins/#{name}", remove_source_mapping_url(content))
+        save_file("#{save_to}/dashboard/plugins/#{name.gsub('.css', '.scss')}", remove_source_mapping_url(content))
       end
       log_processed "#{tabler_plugin_files * ' '}"
 
@@ -62,7 +62,7 @@ class Updater
 
     def write_plugins_file(plugins_file, tabler_plugin_files)
       tabler_plugin_files.each do |line|
-        plugins_file.puts "@import \"tabler/plugins/#{line}\";"
+        plugins_file.puts "@import \"tabler/plugins/#{line.gsub('.css', '.scss')}\";"
       end
     end
   end

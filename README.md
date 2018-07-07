@@ -44,7 +44,7 @@ You can also choose to include plugin css on a per-plugin basis, for example:
 @import "tabler/variables";
 @import "bootstrap";
 @import "tabler";
-@import "tabler/plugins/charts-c3/plugin.css";
+@import "tabler/plugins/charts-c3/plugin.scss";
 ```
 
 Make sure the file has `.scss` extension (or `.sass` for Sass syntax). If you have just generated a new Rails app,
