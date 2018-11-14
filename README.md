@@ -24,14 +24,15 @@ Ensure that `sprockets-rails` is at least v2.3.2.
 
 `bundle install` and restart your server to make the files available through the pipeline.
 
-Import Tabler styles and optionally Tabler Plugin styles in `app/assets/stylesheets/application.scss`:
+Import Tabler styles and optionally Tabler Plugin styles and icons in `app/assets/stylesheets/application.scss`:
 
 ```scss
 // Custom tabler variables must be set or imported *before* bootstrap and tabler.
 @import "tabler/variables";
 @import "bootstrap";
 @import "tabler";
-@import "tabler.plugins";
+@import "tabler.plugins"; // optional
+@import "tabler.icons"; // optional includes [browser, flag, payments]
 ```
 
 The available variables can be found [here][tabler-variables.scss].  
@@ -45,6 +46,16 @@ You can also choose to include plugin css on a per-plugin basis, for example:
 @import "bootstrap";
 @import "tabler";
 @import "tabler/plugins/charts-c3/plugin.scss";
+```
+
+or include icons css per type, for example:
+
+```scss
+// Custom tabler variables must be set or imported *before* tabler.
+@import "tabler/variables";
+@import "bootstrap";
+@import "tabler";
+@import "tabler/icons/flag";
 ```
 
 Make sure the file has `.scss` extension (or `.sass` for Sass syntax). If you have just generated a new Rails app,
