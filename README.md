@@ -17,7 +17,7 @@ Please see the appropriate guide for your environment of choice:
 
 **v0.1.4 BREAKING CHANGE:**
 
-Icons are no longer included by default. Instead, you can include all the icon sets or the specific icon sets you want (either browser, flag, and/or payments).  Read below for more info on how to do this.
+Images are no longer included by default. Instead, you can include all the image sets or the specific image sets you want (either browser, flag, and/or payments).  Read below for more info on how to do this.
 
 ------------
 
