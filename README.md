@@ -13,6 +13,14 @@ Please see the appropriate guide for your environment of choice:
 
 ### a. Ruby on Rails
 
+------------------------
+
+**v0.1.4 BREAKING CHANGE:**
+
+Icons are no longer included by default. Instead, you can include all the icon sets or the specific icon sets you want (either browser, flag, and/or payments).  Read below for more info on how to do this.
+
+------------
+
 Add `bootstrap` and `tabler-rubygem` to your Gemfile:
 
 ```ruby
